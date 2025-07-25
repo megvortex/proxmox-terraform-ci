@@ -1,0 +1,52 @@
+variable "proxmox_api_url" {
+  type        = string
+  description = "URL Proxmox API"
+}
+
+variable "proxmox_api_token_id" {
+  type        = string
+  description = "Proxmox API Token ID"
+}
+
+variable "proxmox_api_token_secret" {
+  type        = string
+  description = "Proxmox API Token Secret"
+}
+variable "vmid" {
+  default = 9002
+}
+
+variable "vm_name" {
+  default = "vm-clone-tf"
+}
+
+variable "proxmox_node" {
+  default = "pve1"
+}
+
+variable "template_name" {
+  default = "ubuntu-template"
+}
+
+variable "storage" {}
+
+variable "bridge" {
+  default = "vmbr0"
+}
+
+variable "ci_user" {
+  default = "[USERNAME]"
+}
+
+variable "ci_password" {
+  default = "[PASSWORD HERE]"
+}
+
+variable "ssh_public_key" {}
+
+variable "memory" {}
+
+variable "cpu_cores" {
+  type = number
+  default = 2
+}
